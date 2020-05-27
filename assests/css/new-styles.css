@@ -1,0 +1,132 @@
+::placeholder{
+    font-style: italic;
+}
+
+.centerdad{
+    display: flex;
+    align-items: center;
+}
+
+.center-element{
+    margin: 0 auto;
+}
+.margin-0{
+    margin: 30px;
+}
+
+.gris{
+    margin-top: -30px;
+    color: #888;
+    width: 50%;
+    font-size: 18px;
+}
+
+.gris2{
+    text-align: center;
+    margin-left: 23%;
+    margin-top: 3%;
+    color: #888;
+    width: 60%;
+    font-size: 24px;
+}
+
+.celestes{
+    color: #2EAEDE;
+}
+
+.azul{
+    color: #2EAEDE;
+}
+
+.logo-form{
+    width: 150px;
+}
+
+.margin-abajo{
+    margin-bottom: 40px;
+}
+
+.margin-0{
+    margin: 30px;
+}
+
+.margin-1{
+    margin: 50px;
+}
+
+.align-center{
+    text-align: center; 
+}
+
+.align-left{
+    text-align: left; 
+}
+
+.align-right{
+    text-align: right; 
+}
+
+.gradiente{
+    background-image: linear-gradient(to left bottom, #1f9cd7, #128fcf, #0882c6, #0775bc, #0e68b2);
+}
+
+.boton-siguiente{
+    color: #fff;
+    width: 360px;
+    height: 60px;
+    border: none;
+    margin-top: -20px;
+    border-radius: 1000px;
+    background-image: linear-gradient(to left bottom, #1D96D3, #128fcf, #0882c6, #0775bc, #0e68b2);
+}
+
+.boton-sig{
+    color: #fff;
+    width: 160px;
+    height: 60px;
+    border: none;
+    margin-right:  5%;
+    margin-left: 10%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to left bottom, #1f9cd7, #128fcf, #0882c6, #0775bc, #0e68b2);
+}
+
+.boton-sig#next2{
+
+}
+
+.boton-reg{
+    color: #fff;
+    width: 200px;
+    height: 60px;
+    margin-bottom: -20px;
+    
+    border: none;
+    border-radius: 1000px;
+    background-image: linear-gradient(to left bottom, #1f9cd7, #128fcf, #0882c6, #0775bc, #0e68b2);
+}
+
+.boton-reg#optpas{
+    margin-right: -20%;
+    margin-left: 20%;
+}
+
+.btn-group{
+    color: #fff;
+    border: none;
+    background-color: linear-gradient(to left bottom, #1f9cd7, #128fcf, #0882c6, #0775bc, #0e68b2);
+}
+
+.bienvenida{
+    background-image: url(/assests/img/fondo-bienvenida.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btns{
+    margin-top: 10%;
+    width: 100%;
+}
+#dire{
+    margin-top: 5%;
+}

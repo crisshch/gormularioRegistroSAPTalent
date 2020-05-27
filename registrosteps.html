@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>SAPTalent</title>
+    <link rel="shortcut icon" href="assests/img/Logotipo-SAPTalent-original.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="assests/css/styles.css" rel="stylesheet" >
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assests/js/registrer.js"></script>
+    </head>
+    <body>
+        <div id="1" class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-9 col-md-10 ">
+                    <div id="card" class="card b-0 rounded-5 show bienvenida" style="background-image: url(assests/img/fondo-bienvenida.png);">
+                        <div class="p-3 justify-content-center text-left">
+                            <img src="assests/img/Logotipo-SAPTalent-original.svg" class="logo-form margin-0" alt="">
+                            <h4 class="heading azul margin-0 text-left">Bienvenido a SAPTalent <br>El lugar en donde tu destacas</h4>
+                            <p class="margin-0 gris subtitulo">Para comenzar, necesitas crear tu perfil.
+                            <br> No te preocupes, nosotros te asistiremos en ello</p>
+                            <button name="next" id="next1" class="next boton-siguiente margin-0">COMENZAR REGISTRO</button>
+                            <div class="col-lg-9 col-md-11 col-12 list text-left margin-0">
+                                <div class="custom-control custom-checkbox mb-4">
+                                    <input id="customCheck1" type="checkbox" class="custom-control-input" checked="1"> 
+                                    <label for="customCheck1" class="custom-control-label gris">Estoy de acuerdo con los <a href="#">Términos y condiciones</a>
+                                    </label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="or-seperator"><i>O</i></div>
+                        <div class="social-btn text-center">
+                            <a href="#" class="btn btn-primary btn-block btn-lg">
+                                <i class="fa fa-facebook"></i> Ingresar con <b>Facebook</b>
+                            </a>
+                            <a href="#" class="btn btn-danger btn-block btn-lg">
+                                <i class="fa fa-google-plus-square"></i> Ingresar con <b>Google</b>
+                            </a>
+                            <a href="#" class="btn btn-secondary btn-block btn-lg">
+                                <i class="fa fa-instagram"></i> Ingresar con <b>Instagram</b>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="2" class="card b-0 rounded-0">
+                        <div class="p-3 justify-content-center text-center">
+                            <img src="assests/img/Logotipo-SAPTalent-original.svg" class="logo-form margin-0" alt="">
+                            <p class="heading gris text-center centrar">Para comenzar, necesitamos tus datos básicos:</p>
+                            <div class="row justify-content-center text-center">
+                                <div class="btn-group btn-group-toggle margin-abajo" data-toggle="buttons">
+                                    <button name="next" id="optrut" class="active boton-reg" onclick="cambioReg(1)">RUT</button>
+                                    <button name="optpas" id="optpas" class="unactive boton-reg" onclick="cambioReg(2)">Pasaporte</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center mb-4">
+                                <div class="col-xl-7 col-lg-8 col-10 list text-left formulario-rut" id="formrut">
+                                    <div class="form-group ">
+                                        <div class="formulario">
+                                        <input type="text" id="rut" name="rut" placeholder="RUT" class="gris form-control" onblur="validate(1)">
+                                        </div>
+                                        <div class="formulario">
+                                        <input type="text" id="nom" name="nombre" placeholder="Nombres" class="gris form-control" onblur="validate(2)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="ape" name="apellidos" placeholder="Apellidos" class="gris form-control" onblur="validate(3)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="tel" name="telefono" placeholder="+56 9 7890 7890" class="gris form-control" onblur="validate(4)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="ema" name="email" placeholder="Correo Electrónico" class="gris form-control" onblur="validate(5)" onchange="validarEmail(this.value)" >
+                                    </div>
+                                    
+                                    <div class="formulario"> 
+                                        <input list="estado-civil" id="est" name="estado" placeholder="Estado Civil" class="form-control" onblur="validate(6)" > 
+                                            <datalist id="estado-civil"> 
+                                                <option value="Soltero/a" /> 
+                                                <option value="Casado/a" />  
+                                                <option value="Divorsiado/a" /> 
+                                                <option value="Viudo/a" /> 
+                                                <option value="Unión Libre" /> 
+                                                <option value="Pareja de Hecho" /> 
+                                            </datalist> 
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-8 col-10 list text-left formulario-pasaporte" id="formpas">
+                                    <div class="form-group ">
+                                        <div class="formulario">
+                                        <input type="text" id="nropas" name="nropas" placeholder="N° Pasaporte" class="gris form-control" onblur="validate(7)">
+                                        </div>
+                                        <div class="formulario">
+                                            <input type="text" id="nompas" name="nombrepas" placeholder="Nombres" class="gris form-control" onblur="validate(8)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="apepas" name="apellidospas" placeholder="Apellidos" class="gris form-control" onblur="validate(9)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="telpas" name="telefonopas" placeholder="+56 9 7890 7890" class="gris form-control" onblur="validate(10)">
+                                    </div>
+                                    <div class="formulario">
+                                        <input type="text" id="emapas" name="emailpas" placeholder="Correo Electrónico" class="gris form-control" onblur="validate(11)">
+                                    </div>
+                                    
+                                    <div class=" formulario"> 
+                                        <input list="estado-civil" id="estpas" name="estadopas" placeholder="Estado Civil" class="form-control" onblur="validate(12)"> 
+                                            <datalist id="estado-civil"> 
+                                                <option value="Soltero/a" /> 
+                                                <option value="Casado/a" />  
+                                                <option value="Divorsiado/a" /> 
+                                                <option value="Viudo/a" /> 
+                                                <option value="Unión Libre" /> 
+                                                <option value="Pareja de Hecho" /> 
+                                            </datalist> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <button class="boton-sig prev unactive">Atrás</button>
+                            <button id="next2" class="boton-sig next" onclick="validate(0)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div id="3" class="card b-0 rounded-0">
+                        <div class="p-3 justify-content-center text-center">
+                            <img src="assests/img/Logotipo-SAPTalent-original.svg" class="logo-form margin-0" alt="">
+                            <p class="heading gris text-center centrar">Seguimmos con tu georreferenciación:</p>
+                            <div class="row justify-content-center mb-4">
+                                <div class="col-xl-7 col-lg-8 col-10 list text-left">
+                                    <div class="form-group"> 
+                                        <div class="formulario">
+                                            <input  list="regiones" id="reg" name="regiones" placeholder="Region" class="form-control" onblur="validateGeo(13)" onchange="cambiacom(this.value)"> 
+                                            <datalist id="regiones"> 
+                                                
+                                            </datalist> 
+                                        </div>
+                                        <div class="formulario">
+                                            <input list="comunas" id="com" name="comunas" placeholder="Comuna" class="form-control" onblur="validateGeo(14)">  
+                                            <datalist id="comunas"> 
+                                                
+                                            </datalist>   
+                                        </div>
+                                        <div class="formulario">
+                                            <input type="text" id="dire" name="direccion" placeholder="Dirección" class="gris form-control" onblur="validateGeo(15)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="boton-sig btn prev ">Atrás</button>
+                            <button id="next3" class="boton-sig btn next" onclick="validateGeo(0)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div id="4" class="card b-0 rounded-0">
+                        <div class="p-3 justify-content-center text-center">
+                            <img src="assests/img/Logotipo-SAPTalent-original.svg" class="logo-form margin-0" alt="">
+                            <p class="heading gris text-center centrar">¡Ya Casi! ¿En qué destacas?:</p>
+                            <p class=" gris2 text-center ">Que tipo de consultor eres y cuantos años de experiencia tienes</p>
+                            <div class="row justify-content-center mb-4">
+                                <div class="col-xl-7 col-lg-8 col-10 list text-left">
+                                    <div class="form-group"> 
+                                        <div class="formulario">
+                                            <input  list="nivel" id="niv" name="nivel" placeholder="Consultor Junior..." class="form-control" onblur="validateNivel(16)" >
+                                            <datalist id="nivel"> 
+                                                <option>Consultor Junior</option>
+                                                <option>Consultor Senior</option>
+                                                <option>Consultor Training</option>
+                                                <option>Usuario Funcional</option>
+                                            </datalist> 
+                                        </div>
+                                        <div class="formulario">
+                                            <input type="number" id="explab" name="explaboral" placeholder="Años de experiencia Laboral" class="form-control" onblur="validateNivel(17)">
+                                        </div>
+                                        <div class="formulario">
+                                            <input type="number" id="expSAP" name="expSAP" placeholder="Años de experiencia SAP" class="gris form-control" onblur="validateNivel(18)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="boton-sig btn prev ">Atrás</button>
+                            <button id="next4" class="boton-sig btn next" onclick="validateNivel(0)">Siguiente</button>
+                        </div>
+                    </div>
+                    <div id="5"class="card b-0 rounded-0">
+                        <div class="p-3 justify-content-center text-center">
+                            <img src="assests/img/Logotipo-SAPTalent-original.svg" class="logo-form margin-0" alt="">
+                            <p class="heading gris text-center centrar">Y por último, hemos enviado un email de confirmación a tu cuenta de correo.</p>
+                            <p class="heading gris text-center centrar">Activa comienza a ser parte de SAPTalent</p>
+                            <button id="next5" class="boton-sig btn next">ENTENDIDO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var element = document.getElementById('name');
+var addError = function() { element.classList.add('error'); };
+var removeError = function() { element.classList.remove('error'); };
+        </script>
+</body>
+</html>
